@@ -50,6 +50,7 @@ for day in C_Dates:
     Max_Plot=math.log(data_max)*25
     ##Scale Data for plotting. Make non-zero data to log*25 (based on testing)
     d = [math.log(x)*10000 if x>0 else 0 for x in data]
+    cd = [math.log(x)*30000 if x>0 else 0 for x in data]
     ##Set figure size to have good map resolution
     fig = plt.figure(num=None, figsize=(100, 50))
     m = Basemap(projection='cyl', llcrnrlat = -90, llcrnrlon = -180, urcrnrlat = 90, urcrnrlon = 180, resolution=None)
@@ -60,28 +61,28 @@ for day in C_Dates:
     lon = y
     x,y = m(lon, lat)
     ##plot scaled data as scatter to allow for different colors. Using 'YlOrRd' colormap for now. 
-    m.scatter(x,y, s=d, c=d, alpha=0.7, cmap='YlOrRd')
+    m.scatter(x,y, s=d, c=cd, alpha=0.7, cmap='Reds')
     #for x, y, d in zip(x, y, d):
     #    m.plot(x, y, 'ro', markersize=d, alpha=0.4)
     ##Label dates
     ##Label 1 corrodinates. 
     Label1x=-57
-    Label1y=40
+    Label1y=20
     ##Print date
-    plt.text(Label1x, Label1y, day,fontsize=120,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))   
+    plt.text(Label1x, Label1y, day,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
     #Print total cases below
-    plt.text(Label1x, Label1y-7, 'World Cases:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))   
-    plt.text(Label1x, Label1y-12, data_sum,fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
+    plt.text(Label1x, Label1y-7, 'World Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
+    plt.text(Label1x, Label1y-12, data_sum,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))
     ##Extra code for printing max region
     #plt.text(Label1x, Label1y-17, 'Region Max:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
     #plt.text(Label1x, Label1y-22,  Max_Place[0],fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
     #plt.text(Label1x, Label1y-27,  data_max,fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
     #Label 2 corrodinates. 
-    Label2x=144
-    Label2y=40
-    plt.text(Label2x, Label2y, day,fontsize=120,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))   
-    plt.text(Label2x, Label2y-7, 'Total Cases:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))   
-    plt.text(Label2x, Label2y-12, data_sum,fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
+    Label2x=150
+    Label2y=20
+    plt.text(Label2x, Label2y, day,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
+    plt.text(Label2x, Label2y-7, 'World Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
+    plt.text(Label2x, Label2y-12, data_sum,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))
     ##Extra code for printing max region
     #plt.text(Label2x, Label2y-17, 'Region Max:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
     #plt.text(Label2x, Label2y-22,  Max_Place[0],fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
