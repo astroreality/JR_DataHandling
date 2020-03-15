@@ -71,7 +71,7 @@ for day in C_Dates:
     ##Print date
     plt.text(Label1x, Label1y, day,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
     #Print total cases below
-    plt.text(Label1x, Label1y-7, 'World Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
+    plt.text(Label1x, Label1y-7, 'Worldwide Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
     plt.text(Label1x, Label1y-12, data_sum,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))
     ##Extra code for printing max region
     #plt.text(Label1x, Label1y-17, 'Region Max:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
@@ -81,7 +81,7 @@ for day in C_Dates:
     Label2x=150
     Label2y=20
     plt.text(Label2x, Label2y, day,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
-    plt.text(Label2x, Label2y-7, 'World Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
+    plt.text(Label2x, Label2y-7, 'Worldwide Total',fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))   
     plt.text(Label2x, Label2y-12, data_sum,fontsize=90,fontweight='bold',ha='left',va='center',color='silver',bbox=dict(facecolor='silver', alpha=0))
     ##Extra code for printing max region
     #plt.text(Label2x, Label2y-17, 'Region Max:',fontsize=100,fontweight='bold',ha='left',va='center',color='w',bbox=dict(facecolor='w', alpha=0))
